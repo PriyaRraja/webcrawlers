@@ -1,5 +1,3 @@
-# webcrawlers
-
 # indeed_scraper:
   Python tool that extracts job listings from Indeed Canada for any search query and location. The interesting part is that I didn't scrape HTML — I discovered that Indeed embeds all job card data as a structured JSON object inside the page source, the same data their React frontend uses to render the page. I extract that JSON directly using a regex, which gives me clean structured data including job title, company, location, salary, and posting date — all fields that wouldn't be available through HTML parsing alone. The tool filters results to only jobs where the title actually contains the search keyword, paginate through all results, and exports everything to a formatted Excel file.
 
